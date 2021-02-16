@@ -19,7 +19,7 @@ describe("todos API", () => {
   });
 
   it("loads the initial items", () => {
-    getItems().its('body').should("deep.eq", cy.fixture("initial_items.json"));
+    getItems().its("body").should("deep.eq", cy.fixture("initial_items.json"));
   });
 
   it("returns id + task objects", () => {

@@ -1,7 +1,7 @@
 import "cypress-jest-adapter";
 
 export const getItems = () =>
-  cy.request({ url: '/todos',failOnStatusCode: false });
+  cy.request({ url: "/todos", failOnStatusCode: false });
 
 before(() => {
   cy.log("Before All: Setting up app..");
@@ -10,7 +10,7 @@ before(() => {
 beforeEach(() => {
   cy.log("Adding headers...");
   cy.intercept("**", (req) => {
-    req.headers["Authorization"] = "some token";
+    req.headers.Authorization = "some token";
   });
 });
 
