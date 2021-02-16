@@ -8,7 +8,7 @@ describe("todos API", () => {
       .should("include", "application/json");
   });
 
-  it("should fail", () => {
+  it.only("should fail", () => {
     getItems().then((response) => {
       expect(response.status).toEqual(404);
     });
