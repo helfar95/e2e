@@ -1,4 +1,4 @@
-name: cypress-typescript-jest-expect
+name: e2e
 'on':
   push: null
   schedule:
