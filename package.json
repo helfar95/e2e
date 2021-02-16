@@ -1,0 +1,42 @@
+{
+  "author": "Hossam Ahmed <helfar@instabug.com>",
+  "dependencies": {
+    "cypress": "6.5.0",
+    "cypress-jest-adapter": "0.1.1",
+    "rimraf": "3.0.2",
+    "tsify": "5.0.2",
+    "typescript": "4.1.5"
+  },
+  "description": "E2E tests",
+  "devDependencies": {
+    "@types/cypress-cucumber-preprocessor": "1.14.1",
+    "@types/jest": "26.0.20",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "tslint": "6.1.3",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "tslint --fix",
+      "prettier --write"
+    ]
+  },
+  "name": "e2e",
+  "scripts": {
+    "clean:screenshots": "npx cypress/screenshots/*",
+    "clean:video": "npx rimraf cypress/videos/*",
+    "lint": "npx tslint -c tslint.json './cypress/**/*.ts'",
+    "open": "npx cypress open",
+    "pretty": "npx prettier --no-config './cypress/**/*.ts' --write",
+    "test": "npx cypress run"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "types": [
+      "jest",
+      "cypress"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "target": "es5",
+    "skipLibCheck": true,
+    "paths": {
+      "chai": [
+        "./noop.d.ts"
+      ]
+    },
+    "baseUrl": "../node_modules"
+  }
+}
